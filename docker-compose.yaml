@@ -1,0 +1,43 @@
+services:
+  database:
+    container_name: database
+    build:
+      context: ./mysql
+      dockerfile: Dockerfile
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456789
+    networks:
+      web-interna:
+        ipv4_address: 10.0.0.2
+    volumes:
+      - db_data:/var/lib/mysql
+      - db_scripts:/docker-entrypoint-initdb.d/
+    tmpfs:
+      - /var/run/mysqld      
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 1g
+networks:
+  web-interna:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/24
+volumes:
+  db_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./mysql/data
+      o: bind
+  db_scripts:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./mysql/scripts
+      o: bind
