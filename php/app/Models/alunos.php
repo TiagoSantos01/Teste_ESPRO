@@ -6,9 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Alunos extends Model
 {
-    protected $table = "alunos";
-     const CREATED_AT = 'data_criacao';
-    const UPDATED_AT = 'data_atualizacao';
     protected $fillable = [
         'nome',
         'cpf',
@@ -46,22 +43,17 @@ class Alunos extends Model
         return $query->where('cod_turma', $turmaId)->where('exclusao', false);
     }
 
-  
     public function scopeAtivo($query)
     {
         return $query->where('exclusao', false);
-    }
-    public function scopeAtivoById($query, $id)
-    {
-        return $query->where('id', $id)->where('exclusao', false);
     }
     public function scopeCpfByAtivo($query, $cpf)
     {
         return $query->where('cpf', $cpf)->where('exclusao', false);
     }
-    public function scopeExcluir($query, $id)
+    public function scopeExcluirByCPF($query, $cpf)
     {
-        return $query->where('id', $id)->where('exclusao', false)->update(['exclusao' => true, 'data_exclusao' => now()]);
+        return $query->where('cpf', $cpf)->where('exclusao', false)->update(['exclusao' => true, 'data_exclusao' => now()]);
     }
 
     

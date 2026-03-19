@@ -9,15 +9,16 @@ class Turmas extends Model
     protected $table = "turmas";
     const CREATED_AT = 'data_criacao';
     const UPDATED_AT = 'data_atualizacao';
-      protected $fillable = [
+    protected $fillable = [
         'nome',
         'serie',
         'periodo',
         'dia_da_semana',
         'cod_materia',
-        'cod_sala'
+        'cod_sala',
+        'qtd_alunos'
     ];
-      protected function casts(): array
+    protected function casts(): array
     {
         return [
             'id' => 'integer',
