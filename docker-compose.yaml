@@ -30,6 +30,8 @@ services:
     ports:
       - "80:80"
     restart: always
+    hostname: api_laravel.espro.com
+    domainname: api_laravel.espro.com       
     networks:
       web-interna:
         ipv4_address: 10.0.0.3
@@ -49,6 +51,8 @@ services:
       - "443:8443"
     restart: always
     command: npm run start:dev
+    hostname: api_node.espro.com
+    domainname: api_node.espro.com    
     networks:
       web-interna:
         ipv4_address: 10.0.0.4
@@ -69,6 +73,8 @@ services:
       - "5173:5173"
     restart: always
     command: npm run start:https
+    hostname: front.espro.com
+    domainname: front.espro.com       
     networks:
       web-interna:
         ipv4_address: 10.0.0.5
