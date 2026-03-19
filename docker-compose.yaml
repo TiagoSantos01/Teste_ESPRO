@@ -22,8 +22,8 @@ services:
         limits:
           cpus: '0.50'
           memory: 1g
-  api:
-    container_name: api
+  api_laravel:
+    container_name: api_laravel
     build:
       context: ./php
       dockerfile: Dockerfile
@@ -35,6 +35,25 @@ services:
         ipv4_address: 10.0.0.3
     volumes:
       - api_php:/var/www/html
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 1g
+  api_node:
+    container_name: api_node
+    build:
+      context: ./node
+      dockerfile: Dockerfile
+    ports:
+      - "443:8443"
+    restart: always
+    command: npm run start:dev
+    networks:
+      web-interna:
+        ipv4_address: 10.0.0.4
+    volumes:
+      - api_node:/app
     deploy:
       resources:
         limits:
@@ -64,4 +83,10 @@ volumes:
     driver_opts:
       type: none
       device: ./php
+      o: bind
+  api_node:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./node
       o: bind

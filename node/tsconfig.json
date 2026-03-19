@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES6",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "strictBindCallApply": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@i18n": ["./src/common/utils/i18n.util"],
+      "@application/*": ["./src/application/*"],
+      "@common/*": ["./src/common/*"],
+      "@domain/*": ["./src/domain/*"],
+      "@enums/*": ["./src/domain/enums/*"],
+      "@entities/*": ["./src/domain/entities/*"],
+      "@services/*": ["./src/domain/services/*"],
+      "@interfaces/*": ["./src/domain/interfaces/*"],
+      "@dto/*": ["./src/domain/dto/*"],
+      "@infrastructure/*": ["./src/infrastructure/*"],
+    }
+  }
+  
+}
