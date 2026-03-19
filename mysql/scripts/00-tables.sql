@@ -16,6 +16,8 @@ USE `dbo`;
 CREATE TABLE `salas` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `nome` varchar(255),
+    `exclusao` bit DEFAULT 0,
+    `data_exclusao` timestamp DEFAULT NULL,
     `data_criacao` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `data_atualizacao` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)
@@ -28,10 +30,13 @@ CREATE TABLE `salas` (
 CREATE TABLE `materias` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `nome` varchar(255),
+    `exclusao` bit DEFAULT 0,
+    `data_exclusao` timestamp DEFAULT NULL,
     `data_criacao` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `data_atualizacao` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+
 -- --------------------------------------------------------
 --
 -- Estrutura para tabela `periodo`
@@ -40,10 +45,13 @@ CREATE TABLE `periodo` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `inicio` TIME,
     `fim` TIME,
+    `exclusao` bit DEFAULT 0,
+    `data_exclusao` timestamp DEFAULT NULL,
     `data_criacao` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `data_atualizacao` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+
 -- --------------------------------------------------------
 --
 -- Estrutura para tabela `dias_da_semana`
@@ -51,10 +59,13 @@ CREATE TABLE `periodo` (
 CREATE TABLE `dias_da_semana` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `nome` varchar(255),
+    `exclusao` bit DEFAULT 0,
+    `data_exclusao` timestamp DEFAULT NULL,
     `data_criacao` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `data_atualizacao` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+
 -- --------------------------------------------------------
 --
 -- Estrutura para tabela `turmas`
@@ -79,6 +90,7 @@ CREATE TABLE `turmas` (
     FOREIGN KEY (`periodo`) REFERENCES `periodo`(`id`),
     FOREIGN KEY (`dia_da_semana`) REFERENCES `dias_da_semana`(`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+
 -- --------------------------------------------------------
 --
 -- Estrutura para tabela `alunos`
@@ -99,7 +111,3 @@ CREATE TABLE `alunos` (
     PRIMARY KEY (`id`),
     FOREIGN KEY (`cod_turma`) REFERENCES `turmas`(`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
-
-
-
-
