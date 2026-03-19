@@ -1,0 +1,28 @@
+src/
+├── assets/              # Arquivos estáticos como imagens, fontes, ícones, etc.
+├── components/          # Componentes reutilizáveis, como botões, cabeçalhos, etc.
+│   ├── Button.tsx
+│   ├── Header.tsx
+│   └── Footer.tsx
+├── pages/               # Páginas do seu aplicativo, cada uma representando uma rota
+│   ├── Home.tsx
+│   ├── About.tsx
+│   ├── Contact.tsx
+│   └── UserProfile.tsx
+├── routes/              # Arquivo de configuração de rotas
+│   └── AppRoutes.tsx
+├── hooks/               # Hooks personalizados
+│   └── useAuth.ts
+├── services/            # Lógica de chamada à API e outros serviços
+│   ├── api.ts
+│   └── authService.ts
+├── utils/               # Funções auxiliares e utilitários
+│   ├── formatDate.ts
+│   └── validateEmail.ts
+├── context/             # Gerenciamento de estado global com Context API
+│   ├── AuthContext.tsx
+│   └── ThemeContext.tsx
+├── App.tsx              # Componente raiz do aplicativo
+├── index.tsx            # Ponto de entrada da aplicação (renderiza App.tsx)
+└── styles/              # Arquivos de estilos globais (CSS, SCSS)
+    └── global.css

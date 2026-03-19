@@ -1,0 +1,37 @@
+$primary-color: #1a1a1a;        
+$secondary-color: #292929; 
+
+// Dark theme colors
+$dark-bg: #1a1a1a;
+$dark-secondary: #292929;
+$dark-card: #2d2d2d;
+
+// Background colors
+$header-bg: #1a1a1a;
+$footer-bg: #1a1a1a;
+$body-bg: #121212;
+
+// Text colors
+$text-primary: #ffffff;
+$text-secondary: #b3b3b3;
+$text-muted: #808080;
+$text-dark: #212529;
+
+// Status colors
+$success-color: #72d398;
+$danger-color: #f55568;
+$warning-color: #ffba52;
+$info-color: #67b0c0;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 3rem;

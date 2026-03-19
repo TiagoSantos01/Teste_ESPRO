@@ -59,6 +59,26 @@ services:
         limits:
           cpus: '0.50'
           memory: 1g
+  front:
+    container_name: front
+    build:
+      context: ./front
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5173:5173"
+    restart: always
+    command: npm run start:https
+    networks:
+      web-interna:
+        ipv4_address: 10.0.0.5
+    volumes:
+      - front:/app
+      - /app/node_modules
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 1g
 networks:
   web-interna:
     driver: bridge
@@ -89,4 +109,10 @@ volumes:
     driver_opts:
       type: none
       device: ./node
+      o: bind
+  front:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./front
       o: bind
