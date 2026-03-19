@@ -5,6 +5,7 @@ use App\Http\Controllers\DiasDaSemanaController;
 use App\Http\Controllers\MateriasController;
 use App\Http\Controllers\PeriodoController;
 use App\Http\Controllers\SalasController;
+use App\Http\Controllers\TurmaAlunosController;
 use App\Http\Controllers\TurmasController;
 use Illuminate\Support\Facades\Route;
 
@@ -68,5 +69,10 @@ Route::group(["prefix" => "v1"], function () {
         Route::get('{id}', [TurmasController::class, 'getTurma'])->name('buscar turma');
         Route::put('{id}', [TurmasController::class, 'updateTurma'])->name('atualizar turma');
         Route::delete('{id}', [TurmasController::class, 'deleteTurma'])->name('deletar turma');
+        
+        Route::prefix('{id}/alunos')->name('turma com alunos')->group(function () {
+            Route::get('', [TurmaAlunosController::class, 'getAlunosPorTurma'])->name('buscar alunos por turma');
+            Route::delete('', [TurmaAlunosController::class, 'deleteAlunosPorTurma'])->name('deletar alunos por turma');
+        });
     });
 });

@@ -13,12 +13,10 @@ export class DiasDaSemana {
     @IsNotEmpty({ message: 'diasDaSemana.id.isNotEmpty' })
     id: number
 
-    @IsEnum(DiasDaSemanaEnum, { message: 'diasDaSemana.nome.isEnum' })
+    @IsEnum(DiasDaSemanaEnum, { message: 'diasDaSemana.nome.isEnum' },)
     @IsNotEmpty({ message: 'diasDaSemana.nome.isNotEmpty' })
     @Transform(({ value }: { value: unknown }) =>
-        typeof value === 'string'
-            ? value.toLowerCase().trim()
-            : value,
+        DiasDaSemanaEnum[value as keyof typeof DiasDaSemanaEnum] as DiasDaSemanaEnum as unknown as string || value,
         { toClassOnly: true },
     )
     nome: DiasDaSemanaEnum

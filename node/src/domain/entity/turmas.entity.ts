@@ -22,9 +22,7 @@ export class Turmas {
     @IsEnum(Serie, { message: 'turmas.serie.isEnum' })
     @IsNotEmpty({ message: 'turmas.serie.isNotEmpty' })
     @Transform(({ value }: { value: unknown }) =>
-        typeof value === 'string'
-            ? value.toLowerCase().trim()
-            : value,
+        Serie[value as keyof typeof Serie] as Serie as unknown as string || value,
         { toClassOnly: true },
     )
     serie: Serie;
