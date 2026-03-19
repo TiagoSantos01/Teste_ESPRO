@@ -44,7 +44,7 @@ services:
     container_name: api_node
     build:
       context: ./node
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
       - "443:8443"
     restart: always
@@ -54,6 +54,7 @@ services:
         ipv4_address: 10.0.0.4
     volumes:
       - api_node:/app
+      - /app/node_modules
     deploy:
       resources:
         limits:
