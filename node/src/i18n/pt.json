@@ -47,6 +47,9 @@
         "nome": {
             "isEnum": "O nome deve ser um dos dias válidos.",
             "isNotEmpty": "O nome do dia é obrigatório."
+        },
+        "exclusao": {
+            "isBoolean": "O campo exclusão deve ser verdadeiro ou falso."
         }
     },
     "periodo": {
@@ -58,6 +61,9 @@
         "fim": {
             "isNotEmpty": "O horário de término é obrigatório.",
             "isMilitaryTime": "O horário de término deve estar no formato HH:mm."
+        },
+        "exclusao": {
+            "isBoolean": "O campo exclusão deve ser verdadeiro ou falso."
         }
     },
     "materias": {
@@ -69,6 +75,9 @@
             "isString": "O nome da matéria deve ser um texto.",
             "isNotEmpty": "O nome da matéria é obrigatório.",
             "length": "O nome da matéria deve ter entre 2 e 100 caracteres."
+        },
+        "exclusao": {
+            "isBoolean": "O campo exclusão deve ser verdadeiro ou falso."
         }
     },
     "salas": {
@@ -80,6 +89,9 @@
             "isString": "O nome da sala deve ser um texto.",
             "isNotEmpty": "O nome da sala é obrigatório.",
             "length": "O nome da sala deve ter entre 2 e 100 caracteres."
+        },
+        "exclusao": {
+            "isBoolean": "O campo exclusão deve ser verdadeiro ou falso."
         }
     },
     "turmas": {

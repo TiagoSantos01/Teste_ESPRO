@@ -1,4 +1,5 @@
 import {
+    IsBoolean,
     IsNotEmpty,
     IsNumber,
     IsString,
@@ -16,7 +17,11 @@ export class Salas {
     @Length(2, 100, { message: 'salas.nome.length' })
     nome: string
 
-    data_criacao: Date
+    @IsBoolean({ message: 'sa.exclusao.isBoolean' })
+    @IsNotEmpty({ message: 'materias.exclusao.isNotEmpty' })
+    exclusao: boolean
 
+    data_exclusao: Date | null
+    data_criacao: Date
     data_atualizacao: Date
 }

@@ -4,6 +4,7 @@ import {
     IsNotEmpty,
     IsNumber,
     IsEnum,
+    IsBoolean,
 } from 'class-validator';
 
 export class DiasDaSemana {
@@ -22,7 +23,11 @@ export class DiasDaSemana {
     )
     nome: DiasDaSemanaEnum
 
-    data_criacao: Date
+    @IsBoolean({ message: 'diasDaSemana.exclusao.isBoolean' })
+    @IsNotEmpty({ message: 'diasDaSemana.exclusao.isNotEmpty' })
+    exclusao: boolean
 
+    data_exclusao: Date | null
+    data_criacao: Date
     data_atualizacao: Date
 }

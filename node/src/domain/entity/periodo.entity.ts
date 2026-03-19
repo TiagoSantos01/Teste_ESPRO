@@ -1,6 +1,7 @@
 import { IsInicioMenorQueFim } from '@common/decorators/inicio-menor-que-fim.decorator';
 import { Transform } from 'class-transformer';
 import {
+    IsBoolean,
     IsMilitaryTime,
     IsNotEmpty,
     IsNumber,
@@ -29,6 +30,11 @@ export class Periodo {
         { toClassOnly: true })
     fim: string;
 
+    @IsBoolean({ message: 'periodo.exclusao.isBoolean' })
+    @IsNotEmpty({ message: 'periodo.exclusao.isNotEmpty' })
+    exclusao: boolean
+
+    data_exclusao: Date | null
     data_criacao: Date;
     data_atualizacao: Date;
 }

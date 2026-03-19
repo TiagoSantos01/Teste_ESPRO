@@ -4,8 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class turmas extends Model
+class Turmas extends Model
 {
+    protected $table = "turmas";
+    const CREATED_AT = 'data_criacao';
+    const UPDATED_AT = 'data_atualizacao';
       protected $fillable = [
         'nome',
         'serie',
@@ -31,5 +34,10 @@ class turmas extends Model
             'data_criacao' => 'date',
             'data_atualizacao' => 'date',
         ];
+    }
+
+    public function scopeExcluir($query, $id)
+    {
+        return $query->where('id', $id)->where('exclusao', false)->update(['exclusao' => true, 'data_exclusao' => now()]);
     }
 }
