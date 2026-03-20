@@ -7,8 +7,12 @@
         "turma": {
             "name": "Turma",
             "title": "Teste Espro - Turma",
+            "confirmDelete": "Tem certeza que deseja excluir a turma {{name}}?",
              "create": "Criar Turma",
-            "edit": "Editar Turma"
+            "edit": "Editar Turma",
+            "serie": {
+                "name": "Série"
+            }
         },
         "aluno": {
             "name": "Aluno",
