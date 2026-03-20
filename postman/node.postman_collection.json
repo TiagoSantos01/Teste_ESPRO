@@ -1,0 +1,1460 @@
+{
+  "info": {
+    "_postman_id": "4be65b7c-91ae-4b0d-8ea5-5cf1cfd041e7",
+    "name": "node",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18853041"
+  },
+  "item": [
+    {
+      "name": "materia",
+      "item": [
+        {
+          "name": "/materia",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 201\", function () {",
+                  "    pm.response.to.have.status(201);",
+                  "",
+                  "",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set(\"materiaId\", jsonData.id);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept-Language",
+                "value": "pt",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\":\"história\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/materia",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "materia"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/materia/listar",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/materia/listar",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "materia",
+                "listar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/materia/:materiaId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/materia/:materiaId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "materia",
+                ":materiaId"
+              ],
+              "variable": [
+                {
+                  "key": "materiaId",
+                  "value": "{{materiaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/materia/:materiaId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\":\"física\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/materia/:materiaId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "materia",
+                ":materiaId"
+              ],
+              "variable": [
+                {
+                  "key": "materiaId",
+                  "value": "{{materiaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/materia/:materiaId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/materia/:materiaId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "materia",
+                ":materiaId"
+              ],
+              "variable": [
+                {
+                  "key": "materiaId",
+                  "value": "{{materiaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "dia-da-semana",
+      "item": [
+        {
+          "name": "/dia-da-semana",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 201\", function () {",
+                  "    pm.response.to.have.status(201);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set(\"diaId\", jsonData.id);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\":\"quintca\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/dia-da-semana",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "dia-da-semana"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/dia-da-semana/listar",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/dia-da-semana/listar",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "dia-da-semana",
+                "listar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/dia-da-semana/:diaId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/dia-da-semana/:diaId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "dia-da-semana",
+                ":diaId"
+              ],
+              "variable": [
+                {
+                  "key": "diaId",
+                  "value": "{{diaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/dia-da-semana/:diaId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\":\"quarta\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/dia-da-semana/:diaId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "dia-da-semana",
+                ":diaId"
+              ],
+              "variable": [
+                {
+                  "key": "diaId",
+                  "value": "{{diaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/dia-da-semana/:diaId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/dia-da-semana/:diaId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "dia-da-semana",
+                ":diaId"
+              ],
+              "variable": [
+                {
+                  "key": "diaId",
+                  "value": "{{diaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "periodo",
+      "item": [
+        {
+          "name": "/periodo",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 201\", function () {",
+                  "    pm.response.to.have.status(201);",
+                  "",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set(\"periodoId\", jsonData.id);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"inicio\": \"08:01\",\n    \"fim\": \"10:00\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/periodo",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "periodo"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/periodo/listar",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/periodo/listar",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "periodo",
+                "listar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/periodo/:periodoId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/periodo/:periodoId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "periodo",
+                ":periodoId"
+              ],
+              "variable": [
+                {
+                  "key": "periodoId",
+                  "value": "{{periodoId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/periodo/:periodoId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"inicio\": \"08:19\",\n    \"fim\": \"10:00\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/periodo/:periodoId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "periodo",
+                ":periodoId"
+              ],
+              "variable": [
+                {
+                  "key": "periodoId",
+                  "value": "{{periodoId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/periodo/:periodoId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/periodo/:periodoId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "periodo",
+                ":periodoId"
+              ],
+              "variable": [
+                {
+                  "key": "periodoId",
+                  "value": "{{periodoId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "salas",
+      "item": [
+        {
+          "name": "/sala",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 201\", function () {",
+                  "    pm.response.to.have.status(201);",
+                  "",
+                  "",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set(\"salaId\", jsonData.id);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\":\"ola\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/sala",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "sala"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/sala/listar",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/sala/listar",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "sala",
+                "listar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/sala/:salaId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/sala/:salaId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "sala",
+                ":salaId"
+              ],
+              "variable": [
+                {
+                  "key": "salaId",
+                  "value": "{{salaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/sala/:salaId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\":\"OLA2\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/sala/:salaId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "sala",
+                ":salaId"
+              ],
+              "variable": [
+                {
+                  "key": "salaId",
+                  "value": "{{salaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/sala/:salaId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/sala/:salaId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "sala",
+                ":salaId"
+              ],
+              "variable": [
+                {
+                  "key": "salaId",
+                  "value": "{{salaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "turmas",
+      "item": [
+        {
+          "name": "/turma",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 201\", function () {",
+                  "    pm.response.to.have.status(201);",
+                  "",
+                  "",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set(\"turmaId\", jsonData.id);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\":\"Novatos 2027\",\n  \"serie\":\"{{serie}}\",\n  \"periodo\":{{periodoId}},\n  \"dia_da_semana\":{{diaId}},\n  \"cod_materia\":{{materiaId}},\n  \"cod_sala\":{{salaId}},\n  \"qtd_alunos\":1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/turma",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "turma"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/turma/listar",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/turma/listar",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "turma",
+                "listar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/turma/:turmaId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/turma/:turmaId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "turma",
+                ":turmaId"
+              ],
+              "variable": [
+                {
+                  "key": "turmaId",
+                  "value": "{{turmaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/turma/:turmaId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\n    \"nome\": \"Novatos 2027\",\n    \"periodo\":4\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/turma/:turmaId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "turma",
+                ":turmaId"
+              ],
+              "variable": [
+                {
+                  "key": "turmaId",
+                  "value": "{{turmaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/turma/:turmaId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/turma/:turmaId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "turma",
+                ":turmaId"
+              ],
+              "variable": [
+                {
+                  "key": "turmaId",
+                  "value": "{{turmaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/turma/series/valores",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "",
+                  "",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set(\"serie\", jsonData[0]);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/turma/series/valores",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "turma",
+                "series",
+                "valores"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/turma/:turmaId/alunos",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/turma/:turmaId/alunos",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "turma",
+                ":turmaId",
+                "alunos"
+              ],
+              "variable": [
+                {
+                  "key": "turmaId",
+                  "value": "{{turmaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/turma/:turmaId/alunos",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/turma/:turmaId/alunos",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "turma",
+                ":turmaId",
+                "alunos"
+              ],
+              "variable": [
+                {
+                  "key": "turmaId",
+                  "value": "{{turmaId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "aluno",
+      "item": [
+        {
+          "name": "/aluno",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/aluno/listar",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "aluno",
+                "listar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/aluno",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "// Cole no Pre-request Script do Postman",
+                  "function randomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }",
+                  "function randomFrom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }",
+                  "",
+                  "function randomName() {",
+                  "  const first = ['João', 'Maria', 'Pedro', 'Ana', 'Carlos', 'Beatriz', 'Lucas', 'Mariana', 'Rafael', 'Gabriela'];",
+                  "  const last = ['Silva', 'Souza', 'Oliveira', 'Santos', 'Pereira', 'Costa', 'Almeida', 'Rodrigues'];",
+                  "  return `${randomFrom(first)} ${randomFrom(last)}`;",
+                  "}",
+                  "",
+                  "function pad(n, z = 2) { return n.toString().padStart(z, '0'); }",
+                  "",
+                  "function randomDateISO(startYear = 1970, endYear = 2010) {",
+                  "  const y = randomInt(startYear, endYear);",
+                  "  const m = pad(randomInt(1, 12));",
+                  "  const d = pad(randomInt(1, new Date(y, parseInt(m), 0).getDate()));",
+                  "  return `${y}-${m}-${d}`;",
+                  "}",
+                  "",
+                  "// CPF generator (returns 11 digits)",
+                  "function generateCPF() {",
+                  "  const nums = Array.from({ length: 9 }, () => randomInt(0, 9));",
+                  "  const calc = (arr) => {",
+                  "    let sum = 0; for (let i = 0; i < arr.length; i++) sum += arr[i] * (arr.length + 1 - i);",
+                  "    let r = 11 - (sum % 11); return r >= 10 ? 0 : r;",
+                  "  };",
+                  "  const d1 = calc(nums);",
+                  "  const d2 = calc([...nums, d1]);",
+                  "  return nums.join('') + d1.toString() + d2.toString();",
+                  "}",
+                  "",
+                  "function randomEmail(name) {",
+                  "  const domain = ['example.com', 'mail.com', 'test.com', 'ex.com'];",
+                  "  const local = name.toLowerCase().replace(/\\s+/g, '') + randomInt(1, 999);",
+                  "  return `${local}@${randomFrom(domain)}`;",
+                  "}",
+                  "",
+                  "function randomPhone() {",
+                  "  const area = pad(randomInt(11, 99));",
+                  "  const num = '9' + Array.from({ length: 8 }, () => randomInt(0, 9)).join('');",
+                  "  return area + num;",
+                  "}",
+                  "",
+                  "function randomAddress() {",
+                  "  const streets = ['Rua das Flores', 'Av. Brasil', 'Rua Rio Branco', 'Rua Afonso Pena', 'Alameda Santos'];",
+                  "  return `${randomFrom(streets)}, ${randomInt(1, 9999)}`;",
+                  "}",
+                  "",
+                  "const name = randomName();",
+                  "",
+                  "pm.collectionVariables.set(\"nome\", name),",
+                  "  pm.collectionVariables.set(\"cpf\", generateCPF()),",
+                  "  pm.collectionVariables.set(\"data_de_nascimento\", randomDateISO(1970, 2006)),",
+                  "  pm.collectionVariables.set(\"email\", randomEmail(name)),",
+                  "  pm.collectionVariables.set(\"telefone\", randomPhone()),",
+                  "  pm.collectionVariables.set(\"endereco\", randomAddress());",
+                  "",
+                  "",
+                  "const body = {",
+                  "  nome: pm.collectionVariables.get(\"nome\"),",
+                  "  cpf: pm.collectionVariables.get(\"cpf\"),",
+                  "  data_nascimento: pm.collectionVariables.get(\"data_de_nascimento\"),",
+                  "  email: pm.collectionVariables.get(\"email\"),",
+                  "  telefone: pm.collectionVariables.get(\"telefone\"),",
+                  "  endereco: pm.collectionVariables.get(\"endereco\"),",
+                  "  cod_turma: Number(pm.collectionVariables.get(\"cod_turma\")),",
+                  "};",
+                  "pm.request.headers.upsert({ key: 'Content-Type', value: 'application/json' });",
+                  "pm.request.body.update(JSON.stringify(body));"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 201\", function () {",
+                  "    pm.response.to.have.status(201);",
+                  "",
+                  "",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set(\"alunoId\", jsonData.id);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\":\"{{nome}}\",\n    \"cpf\":\"{{cpf}}\",\n    \"data_de_nascimento\":\"{{data_de_nascimento}}\",\n    \"email\":\"{{email}}\",\n    \"telefone\":\"{{telefone}}\",\n    \"cod_turma\":{{cod_turma}},\n    \"endereco\": \"{{endereco_aleatorio}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/aluno",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "aluno"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/aluno/:alunoId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/aluno/:alunoId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "aluno",
+                ":alunoId"
+              ],
+              "variable": [
+                {
+                  "key": "alunoId",
+                  "value": "{{alunoId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/aluno/:alunoId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    // \"nome\":\"{{nome_aleatorio}}\",\n    // \"cpf\":\"{{cpf_aleatorio}}\",\n    // \"data_de_nascimento\":\"{{data_de_nascimento_aleatorio}}\",\n    // \"email\":\"{{email_aleatorio}}\",\n    // \"telefone\":\"{{telefone_aleatorio}}\",\n    // \"cod_turma\":{{cod_turma}},\n    \"endereco\": \"{{endereco_aleatorio}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/aluno/:alunoId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "aluno",
+                ":alunoId"
+              ],
+              "variable": [
+                {
+                  "key": "alunoId",
+                  "value": "{{alunoId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/aluno/:alunoId",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/aluno/:alunoId",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "aluno",
+                ":alunoId"
+              ],
+              "variable": [
+                {
+                  "key": "alunoId",
+                  "value": "{{alunoId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "materiaId",
+      "value": ""
+    },
+    {
+      "key": "diaId",
+      "value": ""
+    },
+    {
+      "key": "periodoId",
+      "value": ""
+    },
+    {
+      "key": "salaId",
+      "value": ""
+    },
+    {
+      "key": "serie",
+      "value": ""
+    },
+    {
+      "key": "turmaId",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "nome",
+      "value": ""
+    },
+    {
+      "key": "cpf",
+      "value": ""
+    },
+    {
+      "key": "data_de_nascimento",
+      "value": ""
+    },
+    {
+      "key": "email",
+      "value": ""
+    },
+    {
+      "key": "telefone",
+      "value": ""
+    },
+    {
+      "key": "endereco",
+      "value": ""
+    },
+    {
+      "key": "cod_turma",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "endereco_aleatorio",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "alunoId",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
