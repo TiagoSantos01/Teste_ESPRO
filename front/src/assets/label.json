@@ -6,19 +6,33 @@
         },
         "turma": {
             "name": "Turma",
-            "title": "Teste Espro - Turma"
+            "title": "Teste Espro - Turma",
+             "create": "Criar Turma",
+            "edit": "Editar Turma"
         },
         "aluno": {
             "name": "Aluno",
-            "title": "Teste Espro - Aluno"
+            "title": "Teste Espro - Aluno",
+            "confirmDelete": "Tem certeza que deseja excluir o aluno {{name}}?",
+
+             "create": "Criar Aluno",
+            "edit": "Editar Aluno"
         },
         "sala": {
             "name": "Sala",
-            "title": "Teste Espro - Sala"
+            "title": "Teste Espro - Sala",
+            "confirmDelete": "Tem certeza que deseja excluir a sala {{name}}?",
+
+             "create": "Criar Sala",
+            "edit": "Editar Sala"
         },
         "materia": {
             "name": "Materia",
-            "title": "Teste Espro - Materia"
+            "title": "Teste Espro - Materia",
+            "confirmDelete": "Tem certeza que deseja excluir a matéria {{name}}?",
+
+             "create": "Criar Materia",
+            "edit": "Editar Materia"
         },
         "periodo": {
             "name": "Periodo",
@@ -30,9 +44,13 @@
             "edit": "Editar Período"
         },
         "diaDaSemana": {
-            "name": "DiaDaSemana",
-            "title": "Teste Espro - DiaDaSemana"
-        }
+            "name": "Dia da Semana",
+            "title": "Teste Espro - Dia da Semana",
+            "confirmDelete": "Tem certeza que deseja excluir {{day}}?",
+            "create": "Criar Dia da Semana",
+            "edit": "Editar Dia da Semana"
+
+            }
     },
     "actions": {
         "title": "Ações",
