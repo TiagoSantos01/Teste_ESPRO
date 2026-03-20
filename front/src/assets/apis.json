@@ -1,3 +1,148 @@
 {
-    
+    "materia": {
+        "create": {
+            "path": "{{url}}/materia",
+            "method": "post"
+        },
+        "list": {
+            "path": "{{url}}/materia/listar",
+            "method": "get"
+        },
+        "get": {
+            "path": "{{url}}/materia/:materiaId",
+            "method": "get"
+        },
+        "update": {
+            "path": "{{url}}/materia/:materiaId",
+            "method": "put"
+        },
+        "delete": {
+            "path": "{{url}}/materia/:materiaId",
+            "method": "delete"
+        }
+    },
+    "diaDaSemana": {
+        "create": {
+            "path": "{{url}}/dia-da-semana",
+            "method": "post"
+        },
+        "list": {
+            "path": "{{url}}/dia-da-semana/listar",
+            "method": "get"
+        },
+        "get": {
+            "path": "{{url}}/dia-da-semana/:diaId",
+            "method": "get"
+        },
+        "update": {
+            "path": "{{url}}/dia-da-semana/:diaId",
+            "method": "put"
+        },
+        "delete": {
+            "path": "{{url}}/dia-da-semana/:diaId",
+            "method": "delete"
+        }
+    },
+    "periodo": {
+        "create": {
+            "path": "{{url}}/periodo",
+            "method": "post"
+        },
+        "list": {
+            "path": "{{url}}/periodo/listar",
+            "method": "get"
+        },
+        "get": {
+            "path": "{{url}}/periodo/:periodoId",
+            "method": "get"
+        },
+        "update": {
+            "path": "{{url}}/periodo/:periodoId",
+            "method": "put"
+        },
+        "delete": {
+            "path": "{{url}}/periodo/:periodoId",
+            "method": "delete"
+        }
+    },
+    "sala": {
+        "create": {
+            "path": "{{url}}/sala",
+            "method": "post"
+        },
+        "list": {
+            "path": "{{url}}/sala/listar",
+            "method": "get"
+        },
+        "get": {
+            "path": "{{url}}/sala/:salaId",
+            "method": "get"
+        },
+        "update": {
+            "path": "{{url}}/sala/:salaId",
+            "method": "put"
+        },
+        "delete": {
+            "path": "{{url}}/sala/:salaId",
+            "method": "delete"
+        }
+    },
+    "turma": {
+        "create": {
+            "path": "{{url}}/turma",
+            "method": "post"
+        },
+        "list": {
+            "path": "{{url}}/turma/listar",
+            "method": "get"
+        },
+        "get": {
+            "path": "{{url}}/turma/:turmaId",
+            "method": "get"
+        },
+        "update": {
+            "path": "{{url}}/turma/:turmaId",
+            "method": "put"
+        },
+        "delete": {
+            "path": "{{url}}/turma/:turmaId",
+            "method": "delete"
+        },
+        "series": {
+            "path": "{{url}}/turma/series/valores",
+            "method": "get"
+        },
+        "alunos": {
+            "list": {
+                "path": "{{url}}/turma/:turmaId/alunos",
+                "method": "get"
+            },
+            "delete": {
+                "path": "{{url}}/turma/:turmaId/alunos",
+                "method": "delete"
+            }
+        }
+    },
+    "aluno": {
+        "list": {
+            "path": "{{url}}/aluno/listar",
+            "method": "get"
+        },
+        "create": {
+            "path": "{{url}}/aluno",
+            "method": "post"
+        },
+        "get": {
+            "path": "{{url}}/aluno/:alunoId",
+            "method": "get"
+        },
+        "update": {
+            "path": "{{url}}/aluno/:alunoId",
+            "method": "put"
+        },
+        "delete": {
+            "path": "{{url}}/aluno/:alunoId",
+            "method": "delete"
+        }
+    }
 }

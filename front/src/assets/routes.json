@@ -1,2 +1,9 @@
 {
+    "home": "/",
+    "turma": "/turma",
+    "aluno": "/aluno",
+    "sala": "/sala",
+    "materia": "/materia",
+    "periodo": "/periodo",
+    "diaDaSemana": "/diaDaSemana"
 }

@@ -1,2 +1,49 @@
 {
+    "page": {
+        "home": {
+            "name": "Home",
+            "title": "Teste Espro - Home"
+        },
+        "turma": {
+            "name": "Turma",
+            "title": "Teste Espro - Turma"
+        },
+        "aluno": {
+            "name": "Aluno",
+            "title": "Teste Espro - Aluno"
+        },
+        "sala": {
+            "name": "Sala",
+            "title": "Teste Espro - Sala"
+        },
+        "materia": {
+            "name": "Materia",
+            "title": "Teste Espro - Materia"
+        },
+        "periodo": {
+            "name": "Periodo",
+            "title": "Teste Espro - Periodo",
+            "start": "Início",
+            "end": "Fim",
+            "confirmDelete": "Tem certeza que deseja excluir o período das {{start}} às {{end}}?",
+            "create": "Criar Período",
+            "edit": "Editar Período"
+        },
+        "diaDaSemana": {
+            "name": "DiaDaSemana",
+            "title": "Teste Espro - DiaDaSemana"
+        }
+    },
+    "actions": {
+        "title": "Ações",
+        "edit": "Editar",
+        "delete": "Excluir",
+        "add": "Adicionar",
+        "cancel": "Cancelar",
+        "save": "Salvar",
+        "yes": "Sim",
+        "no": "Não",
+        "savedSuccessfully": "Salvo com sucesso",
+        "deletedSuccessfully": "Excluído com sucesso"
+    }
 }

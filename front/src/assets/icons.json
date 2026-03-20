@@ -1,0 +1,15 @@
+{
+    "home": "/public/icons/home.png",
+    "aluno": "/public/icons/aluno.png",
+    "materia": "/public/icons/materia.png",
+    "periodo": "/public/icons/periodo.png",
+    "diaDaSemana": "/public/icons/dia-da-semana.png",
+    "sala": "/public/icons/sala.png",
+    "turma": "/public/icons/turma.png",
+    "adicionar": "/public/icons/adicionar.png",
+    "editar": "/public/icons/editar.png",
+    "cancelar": "/public/icons/cancelar.png",
+    "excluir": "/public/icons/excluir.png",
+    "salvar": "/public/icons/salvar.png"
+
+}
